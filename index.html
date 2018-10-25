@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Motherlode</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+	<script src="js/style.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<aside>
+		<form class="pure-form">
+
+ 		<div><h3>Placeholder</h3><input class="bar" type="text" id="turnSpeed" placeholder="X"
+								onblur="if (this.value == '') {this.value = 'X';}"
+ 								onfocus="if (this.value == 'X') {this.value = '';}" /></div>
+
+		<div><input type="button" value="START NEW GAME" id="startButton" class="btn" onclick="startGame();"></div>
+
+		<div><input type="button" value="Upgrade Inventory" id="startButton" class="btn" onclick="invUpgrade();"></div>
+
+		<div><input type="button" value="Upgrade Fuel Tank" id="startButton" class="btn" onclick="fuelUpgrade();"></div>
+
+		<div><input type="button" value="Upgrade Hull Strength" id="startButton" class="btn" onclick="hullUpgrade();"></div>
+
+		</form>
+		<div id="asideNav"></div>
+		<div unselectable="on" class="noSelect" id="asideText"><h3>SETTINGS CLICK HERE</h3></div>
+	</aside>
+
+	<canvas id="canvas" width="900" height="600">
+
+	</canvas>
+
+	<div id="infobar">
+		<p id="fuel">Fuel: 100%</p>
+		<p id="inventory">Inventory Space: 0/6</p>
+		<p id="hull">Hull: 100%</p>
+		<p id="money">Money: $100</p>
+		<p id="fps">FPS:</p>
+	</div>
+
+	<script src="js/main.js"></script>
+</body>
+</html>
